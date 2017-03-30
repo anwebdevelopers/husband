@@ -1,0 +1,109 @@
+.footer {
+    padding: 4rem 0;
+    background-color: darken($gray, 30%);
+}
+.footer__container {
+    @extend .container;
+}
+.footer__title {
+    @extend .title;
+}
+.footer__social {
+    text-align: center;
+    a {
+        display: inline-block;
+        vertical-align: top;
+        width: 2.6rem;
+        height: 2.6rem;
+        margin: 0 .3rem .3rem 0;
+        line-height: 2.6rem;
+        font-size: 1.6rem;
+        border-radius: 50%;
+        text-decoration: none;
+        color: #6d6d6d;
+        background-color: #e7e7e7;
+        text-align: center;
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            color: #000;
+            background-color: $yellow;
+        }
+    }
+}
+.footer__copy {
+    margin: 2rem 0 0 0;
+    font-size: 1.4rem;
+    line-height: 1.25;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+}
+
+.popup {
+    position: relative;
+    max-width: 50rem;
+    width: 100%;
+    padding: 5rem 4.5%;
+    margin: 0 auto;
+    border-radius: 3px;
+    background-color: #fff;
+}
+.popup__title {
+    font-size: 3rem;
+    line-height: 1.25;
+    font-weight: 400;
+    color: #000;
+    font-family: 'FuturisXCondC';
+    text-align: center;
+}
+.popup__text {
+    margin: 2rem 0 2rem 0;
+    font-size: 1.8rem;
+    line-height: 1.25;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+}
+.popup__input {
+    display: block;
+    margin: 2rem 0 0 0;
+
+    input {
+        display: block;
+        width: 100%;
+        height: 4.6rem;
+        padding: 0 2rem;
+        line-height: 4.6rem;
+        color: #000;
+        font-size: 1.8rem;
+        background-color: rgba(255, 255, 255, 1);
+        border: 1px solid $gray;
+        border-radius: 3px;
+        outline: 0;
+        box-shadow: none;
+        font-family: 'Helios-Cond', Verdana, sans-serif;
+        transition: all .5s ease;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none!important;
+        &:hover, &:active, &:focus {
+            border-color: $yellow;
+        }
+    }
+}
+.popup__submit {
+    margin: 2rem 0 0 0;
+    button {
+        width: 100%;
+    }
+}
+.popup__success {
+    font-size: 3rem;
+    line-height: 1.25;
+    font-weight: 400;
+    color: #000;
+    font-family: 'FuturisXCondC';
+    text-align: center;
+}

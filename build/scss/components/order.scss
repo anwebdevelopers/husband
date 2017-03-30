@@ -1,0 +1,112 @@
+.order {
+    padding: 3rem 0 3rem 0;
+    background: url(../img/bg-form-left.png) left bottom, url(../img/bg-form-right.png) right bottom;
+    background-repeat: no-repeat;
+    background-color: $gray;
+}
+.order__container {
+    @extend .container;
+}
+.order__box {
+
+
+}
+.order__title {
+    margin: 0;
+    font-size: 3.1rem;
+    line-height: 3rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #fff;
+    text-align: center;
+    a {
+        text-decoration: none;
+        color: #000;
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            color: $yellow;
+        }
+    }
+}
+.order__form {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0 0 0;
+}
+.order__item {
+    flex: 0 1 auto;
+    width: 30%;
+}
+.order__input {
+    display: block;
+    width: 100%;
+    height: 4.6rem;
+    padding: 0 2rem;
+    line-height: 4.6rem;
+    color: #000;
+    font-size: 1.8rem;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid #fff;
+    border-radius: 3px;
+    outline: 0;
+    box-shadow: none;
+    font-family: 'Helios-Cond', Verdana, sans-serif;
+    transition: all .5s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none!important;
+    &:hover, &:active, &:focus {
+        border-color: $yellow;
+    }
+}
+.order__submit {
+    width: 100%;
+}
+.order__text {
+    margin: 1rem 0 0 0;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+}
+
+@media only screen and (max-width : 1400px) {
+
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .order__form {
+        display: block;
+    }
+    .order__item {
+        max-width: 340px;
+        width: auto;
+        margin: 2rem auto 0 auto;
+        &:first-child {
+            margin: 0 auto 0 auto;
+        }
+    }
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 320px) {
+
+}

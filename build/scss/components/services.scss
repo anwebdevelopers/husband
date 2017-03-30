@@ -1,0 +1,119 @@
+.services {
+    padding: 6rem 0;
+}
+.services__container {
+    @extend .container;
+}
+.services__title {
+    @extend .title;
+}
+.services__box {
+    margin: 4rem 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.services__item {
+    flex: 0 1 auto;
+    width: 30%;
+    margin: 0 0 3rem 0;
+    text-align: center;
+    &:hover, &:active, &:focus, &.active {
+        .services__item-box {
+            &:after {
+                background-color: transparentize(#000, .3);
+            }
+        }
+        .services__item-button {
+            opacity: 1;
+        }
+    }
+}
+.services__item-box {
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition: all .5s ease;
+        border-radius: 3px;
+    }
+}
+.services__item-img {
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 3px;
+    }
+}
+.services__item-button {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .5s ease;
+}
+.services__item-title {
+    margin: 1.5rem 0 0 0;
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 400;
+    color: #000;
+    font-family: 'FuturisXCondC';
+}
+.services__button {
+    margin: 2rem 0 0 0;
+    text-align: center;
+}
+
+@media only screen and (max-width : 1400px) {
+
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .services__box {
+        justify-content: space-around;
+    }
+    .services__item {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .services__box {
+        justify-content: space-between;
+    }
+    .services__item {
+        width: 48%;
+    }
+}
+
+@media only screen and (max-width : 360px) {
+    .services__box {
+        display: block;
+    }
+    .services__item {
+        max-width: 280px;
+        width: auto;
+        margin: 0 auto 3rem auto;
+    }
+}

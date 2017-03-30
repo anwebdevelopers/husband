@@ -1,0 +1,205 @@
+.header {
+    padding: 1rem 0;
+    background-color: $gray;
+    box-shadow: 0 0 50px 0 transparentize(#000, .5);
+}
+.header__container {
+    @extend .container;
+}
+.header__box {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    order: 0;
+    flex: 0 0 auto;
+    width: 7.5rem;
+    img {
+        display: block;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.header__text {
+    order: 1;
+    flex: 0 0 auto;
+    width: 20rem;
+    margin: 0 0 0 2rem;
+}
+.header__title {
+    font-size: 3rem;
+    line-height: 2.8rem;
+    font-weight: 400;
+    font-family: 'FuturisXCondC';
+    color: $yellow;
+}
+.header__undertitle {
+    font-size: 1.8rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-family: 'FuturisXCondC';
+    color: $yellow;
+}
+.header__nav {
+    order: 2;
+    flex: 1 1 auto;
+    display: block;
+    margin: 0 0 0 2rem;
+    font-size: 1.8rem;
+    line-height: 1;
+    font-weight: 400;
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            &:not(:last-child) {
+                position: relative;
+                margin: 0 2rem 0 0;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    right: -1rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 1px;
+                    height: 1.4rem;
+                    background-color: #fff;
+                }
+            }
+            a {
+                position: relative;
+                text-decoration: none;
+                color: #fff;
+                white-space: nowrap;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    right: 50%;
+                    bottom: 0;
+                    height: 1px;
+                    background-color: $yellow;
+                    transition: all .3s ease;
+                }
+                transition: all .5s ease;
+                &:hover, &:active, &:focus {
+                    color: $yellow;
+                    &:after {
+                        left: 0;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+.header__contacts {
+    order: 3;
+    flex: 0 0 auto;
+    width: 20rem;
+    margin: 0 0 0 2rem;
+    text-align: right;
+}
+.header__phone {
+}
+.header__contacts-link {
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 400;
+    font-family: 'FuturisXCondC';
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+}
+.header__contacts-button {
+    margin: .5rem 0 0 0;
+    a {
+        padding: .5rem 2.7rem;
+        font-size: 1.8rem;
+    }
+}
+.header__social {
+    margin: 1rem 0 0 0;
+    a {
+        display: inline-block;
+        vertical-align: top;
+        width: 2.6rem;
+        height: 2.6rem;
+        margin: 0 .3rem .3rem 0;
+        line-height: 2.6rem;
+        font-size: 1.6rem;
+        border-radius: 50%;
+        text-decoration: none;
+        color: #6d6d6d;
+        background-color: #e7e7e7;
+        text-align: center;
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            color: #000;
+            background-color: $yellow;
+        }
+    }
+}
+
+@media only screen and (max-width : 1400px) {
+
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+    html {
+        font-size: 9px;
+    }
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    html {
+        font-size: 8px;
+    }
+    .header__box {
+        flex-wrap: wrap;
+    }
+    .header__contacts {
+        order: 2;
+        flex: 1 0 auto;
+    }
+    .header__nav {
+        order: 3;
+        width: 100%;
+        margin: 2rem 0 0 0;
+    }
+
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+    .header__contacts {
+        order: 1;
+    }
+    .header__text {
+        order: 2;
+        width: 100%;
+        margin: 2rem 0 0 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width : 320px) {
+
+}
