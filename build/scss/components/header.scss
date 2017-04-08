@@ -1,6 +1,11 @@
 .header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 100;
     padding: 1rem 0;
-    background-color: $gray;
+    background-color: transparentize($gray, .1);
     box-shadow: 0 0 50px 0 transparentize(#000, .5);
 }
 .header__container {
@@ -43,11 +48,13 @@
     font-family: 'FuturisXCondC';
     color: $yellow;
 }
-.header__nav {
+.header__center {
     order: 2;
     flex: 1 1 auto;
-    display: block;
     margin: 0 0 0 2rem;
+}
+.header__nav {
+    margin: 1rem 0 0 0;
     font-size: 1.8rem;
     line-height: 1;
     font-weight: 400;
@@ -126,7 +133,7 @@
     }
 }
 .header__social {
-    margin: 1rem 0 0 0;
+    text-align: center;
     a {
         display: inline-block;
         vertical-align: top;
@@ -176,10 +183,13 @@
         order: 2;
         flex: 1 0 auto;
     }
-    .header__nav {
+    .header__center {
         order: 3;
         width: 100%;
-        margin: 2rem 0 0 0;
+        margin: 1rem 0 0 0;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
     }
 
 }
@@ -189,6 +199,9 @@
 }
 
 @media only screen and (max-width : 480px) {
+    .header {
+        position: static;
+    }
     .header__contacts {
         order: 1;
     }
@@ -197,6 +210,9 @@
         width: 100%;
         margin: 2rem 0 0 0;
         text-align: center;
+    }
+    .header__center {
+        display: block;
     }
 }
 

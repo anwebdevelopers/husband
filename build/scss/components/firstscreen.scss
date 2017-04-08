@@ -1,6 +1,6 @@
 .firstscreen {
     position: relative;
-    padding: 6rem 0 2rem 0;
+    padding: 15rem 0 2rem 0;
     background-color: $gray;
     background-image: url(../img/bg-firstscreen.jpg);
     background-repeat: no-repeat;
@@ -104,6 +104,9 @@
 }
 
 @media only screen and (max-width : 768px) {
+    .firstscreen {
+        padding: 18rem 0 2rem 0;
+    }
     .firstscreen__video {
         display: none;
     }
@@ -116,7 +119,9 @@
 }
 
 @media only screen and (max-width : 480px) {
-
+    .firstscreen {
+        padding: 6rem 0 2rem 0;
+    }
 }
 
 @media only screen and (max-width : 360px) {
